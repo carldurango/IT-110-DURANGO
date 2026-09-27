@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Durango's Shoe Shop</title>
+
+  <style>
+  .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    text-align: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  </style>
+</head>
+<body>
+
+  <header id="main-heading" class="header">
+    <h1>SHOE SHOP</h1>
+    <p>Fresh pairs. Step into something better.</p>
+  </header>
+
+
+
+  <hr>
+  <section id="IMAGES">
+    <h2>IMAGES</h2>
+
+    <div class="gallery">
+
+      <div>
+        <img src="images/img1.jpg" alt="Red and white high-top sneaker on a display stand" width="400" height="350">
+        <p>The Classic White, our best seller, back in stock.</p>
+      </div>
+
+
+      <div>
+        <img src="images/img2.jpg" alt="Black low-top running shoe close-up" width="400" height="350">
+        <p>The Classic White, our best seller, back in stock.</p>
+      </div>
+
+
+      <figure>
+        <img src="images/img3.jpg" alt="White canvas sneaker on a wooden shelf" width="400" height="350">
+        <figcaption>The Classic White, our best seller, back in stock.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <hr>
+
+
+  <section id="hyperlinks">
+    <h2>Hyperlinks</h2>
+    <p>Shop around, or reach out.</p>
+
+
+    <p>Internal link: <a href="#multimedia">Jump down to our shoe videos and audio</a></p>
+    <p>External link: <a href="https://sportscentral.ph/collections/basketball" target="_blank">Check out our basketball collection</a></p>
+    <p>Email link: <a href="mailto:durangocarl8@gmail.com">Contact me</a></p>
+    <p>Same-page anchor link: <a href="#useful-tags">See our customer reviews</a></p>
+  </section>
+  <hr>
+
+
+  <section id="multimedia">
+    <h2>Multimedia</h2>
+    <p>A closer look and listen.</p>
+
+    <p>Listen: Running with this shoes</p>
+    <audio controls>
+      <source src="media/running.mp3" type="audio/mpeg">
+      Your browser does not support the audio element. You can
+      <a href="media/running.mp3">download the audio file</a> instead.
+    </audio>
+
+    <br><br>
+    
+    <p>Watch: This is the shoes looks like </p>
+    <video width="320" height="200" controls>
+      <source src="media/ShoeVideo.mp4" type="video/mp4">
+      Your browser does not support the video element. You can
+      <a href="media/ShoeVideo.mp4">download the video file</a> instead.
+    </video>
+  </section>
+
+
+
+   <hr>
+  <section id="useful-tags">
+    <h2>Useful Tags</h2>
+
+    <!-- blockquote: used to set apart a person's comment or feedback -->
+    <blockquote>
+      "Best fit I've had in years, and it arrived faster than I expected."
+    </blockquote>
+
+    <!-- abbr: used to spell out a sizing abbreviation on hover -->
+    <p>All pairs are true to <abbr title="Philippines sizing">PH</abbr> size, check the size chart before ordering.</p>
+
+    <!-- mark: used to highlight a limited-time detail -->
+    <p><mark>Limited stock</mark> on the Classic White,  order before it's gone.</p>
+
+  </section>
+<hr>
+
+  <section id="html-dom">
+  <h2>HTML DOM</h2>
+
+  <p id="dom-explanation">
+    Elements above such as <code>#main-heading</code>, <code>#IMAGES</code>, 
+    and <code>#hyperlinks</code> were given <code>id</code> attributes so they can be 
+    selected individually in the DOM tree.
+  </p>
+  
+  <p>Screenshot of the DOM tree (taken from DevTools, Elements panel):</p>
+  <img src="dom-tree.png" alt="Screenshot of the DOM tree shown in Chrome DevTools" width="500">
+</section>
+
+<footer>
+    <p>Built for the HTML Practical Application Activity.</p>
+  </footer>
+  <!--
+    DOM Parent-Child Explanation:
+    In this HTML document, the <body> element acts as the root parent for all visible content, including the <header>, multiple <section> elements, and the <footer>. Inside the <section id="IMAGES">, the <div class="gallery"> serves as a parent to two standard <div> containers and one <figure> element. Within that <figure>, the <img> and <figcaption> elements are siblings to each other and direct children of the <figure>. Additionally, in the #multimedia section, the <audio> and <video> tags act as parents to their respective <source> tags, demonstrating how the DOM tree categorizes nested HTML elements.
+  -->
+
+</body>
+</html>
