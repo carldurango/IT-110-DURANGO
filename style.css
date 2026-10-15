@@ -1,0 +1,141 @@
+/* Reset and Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333333;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.card {
+  width: 500px;
+  padding: 20px;
+  border: 2px solid #256692;
+  border-radius: 8px;
+  margin: 0 auto 20px auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: midnightblue;
+}
+
+#about {
+  position: relative;
+  border-color: #070c65;
+}
+
+/* Components and Selectors  */
+.card p {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.skills-list > li {
+  background-color: rgba(52, 152, 219, 0.2);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
+.intro::first-letter {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+header, footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #ffffff;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #ecf0f1;
+  margin: 0 5px;
+  color: #2c3e50;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+#about::after {
+  content: "Student";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #2056cb;
+  color: white;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  border-radius: 3px;
+}
+
+/* Total rendered width of one .card: 
+   With box-sizing: border-box, the padding and borders are included inside the 500px width, 
+   so the total rendered width is 500px. */
+
+/* Display and Visibility */
+
+.skills-list {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.hide-none {
+  display: none;
+}
+
+.hide-visibility {
+  visibility: hidden;
+}
+
+/* The visible difference between display: none and visibility: hidden is that 
+   display: none completely removes the element from layout leaving no gap, 
+   whereas visibility: hidden makes it invisible but preserves its exact space on the page. */
+
+.scroll-box {
+  height: 120px;
+  overflow: auto;
+}
+
+/*  Cascade Demonstration */
+.intro {
+  color: #333333;
+}
+
+.intro {
+  color: #2980b9; 
+  /* This second rule wins because both rules have the same specificity (.intro class). 
+     Due to source order, the rule declared later overrides the earlier one. */
+}
+
+/* Reflection Questions */
+/*
+1. In your own words, why did one of your two conflicting rules win in Part A?
+   - The second rule won because both share the same specificity (.intro), and source order dictates that the later declaration takes precedence.
+
+2. What is the rendered width of one .card if box-sizing were content-box instead of border-box? Show your computation.
+   - Width = width (500px) + left padding (20px) + right padding (20px) + left border (2px) + right border (2px) = 544px.
+
+3. When would you choose visibility: hidden instead of display: none?
+   - You would choose visibility: hidden when you want to hide an element temporarily without causing the surrounding elements to shift or reflow into its space.
+*/
